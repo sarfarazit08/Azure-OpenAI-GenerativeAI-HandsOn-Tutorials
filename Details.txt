@@ -1,0 +1,43 @@
+Resource Group : rg-openai-demo
+Region : default
+Instance name : demo-openai2023svc
+Pricing Tier: Standard S0
+
+Endpoint: 
+https://demo-openai2023svc.openai.azure.com/
+
+Key : e3b8577b9bd94828898820b861b645f7
+
+Model: gpt-35-turbo
+Modev version: Auto-update to default
+Deployment name: my-gpt-model
+
+endpoint:
+
+https://demo-openai2023svc.openai.azure.com/openai/deployments/my-gpt-model/completions?api-version=2022-12-01
+
+https://demo-openai2023svc.openai.azure.com/openai/deployments/my-gpt-model/chat/completions?api-version=2023-07-01-preview
+
+
+
+
+import os
+import openai
+openai.api_type = "azure"
+openai.api_base = "https://demo-openai2023svc.openai.azure.com/"
+openai.api_version = "2023-07-01-preview"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+response = openai.ChatCompletion.create(
+  engine="my-gpt-model",
+  messages = [{"role":"system","content":"The system is an AI teacher that helps people learn about AI."},{"role":"user","content":"What are different types of artificial intelligence?"},{"role":"assistant","content":"There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed)."},{"role":"user","content":"What is artificial intelligence?"},{"role":"assistant","content":"Artificial Intelligence (AI) is a branch of computer science that involves the development of algorithms and software that enable machines to perform tasks that would usually require human intelligence. In other words, AI is the ability of machines to learn from experience, perform tasks that typically require human intelligence, and improve over time. AI is based on the idea that machines can be trained to learn from data, identify patterns, and make decisions with minimal human intervention. The ultimate goal of AI is to create machines that can replicate human reasoning and decision-making processes, and even surpass human intelligence in some areas."},{"role":"user","content":"How is it related to machine learning?"},{"role":"assistant","content":"Machine Learning (ML) is a subset of AI that focuses on developing algorithms that enable machines to learn from data, identify patterns, and make predictions or decisions without being explicitly programmed. In other words, it is a way of training machines to recognize patterns and make predictions based on that data. \n\nMachine learning is a critical component of AI because it enables machines to learn and improve their performance over time without being explicitly programmed to do so. Machine learning algorithms can be used to train machines to recognize speech, identify objects in images, predict customer behavior, and much more. \n\nOverall, machine learning is a crucial tool for creating intelligent machines and is a core component of many AI applications."}],
+  temperature=0.7,
+  max_tokens=800,
+  top_p=0.95,
+  frequency_penalty=0,
+  presence_penalty=0,
+  stop=None)
+  
+AZURE_OAI_ENDPOINT=https://demo-openai2023svc.openai.azure.com/
+AZURE_OAI_KEY=e3b8577b9bd94828898820b861b645f7
+AZURE_OAI_MODEL=text-turbo
