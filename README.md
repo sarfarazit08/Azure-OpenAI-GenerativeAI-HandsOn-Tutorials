@@ -16,7 +16,7 @@
 |[6-Generate and improve code with Azure OpenAI Service](https://microsoftlearning.github.io/mslearn-openai/Instructions/Labs/04-code-generation.html) | [![1](./thumbnails/6.png)](https://youtu.be/CUUv2beO8bU)  |
 |[7-Generate images with a DALL-E model](https://microsoftlearning.github.io/mslearn-openai/Instructions/Labs/05-generate-images.html) | [![1](./thumbnails/7.png)](https://youtu.be/dZpYCIc8vEg)  |
 |[8-Use your own data with Azure OpenAI](https://microsoftlearning.github.io/mslearn-openai/Instructions/Labs/06-use-own-data.html) | [![1](./thumbnails/8.png)](https://youtu.be/olvywf8vSVA)  |
-|[9-Explore content filters in Azure OpenAI](https://microsoftlearning.github.io/mslearn-generative-ai/Instructions/Labs/3-azure-openai-content-filters.html)  | [![1](./thumbnails/9.png)](https://youtu.be/olvywf8vSVA)  |
+|[9-Explore content filters in Azure OpenAI](https://microsoftlearning.github.io/mslearn-generative-ai/Instructions/Labs/3-azure-openai-content-filters.html)  | [![1](./thumbnails/9.png)](https://youtu.be/igfh4luutWU)  |
 
 
 
